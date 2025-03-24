@@ -13,3 +13,5 @@ urlpatterns = [
     path("send-email/", views.send_email, name="send_email"),
     re_path(r"^.*$", TemplateView.as_view(template_name="index.html")),
 ]
+
+handler404 = 'K_Char.views.custom_404_view'

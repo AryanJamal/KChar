@@ -53,6 +53,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
+    "K_Char.middleware.APIKeyMiddleware",
 ]
 
 # Enable session-based authentication

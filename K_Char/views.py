@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import JsonResponse
 from django.views.decorators.http import require_POST
-from django.views.decorators.csrf import csrf_exempt, csrf_protect
+from django.views.decorators.csrf import csrf_exempt
 from tensorflow.keras.models import load_model  # type: ignore
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
@@ -9,6 +9,10 @@ from django.core.mail import send_mail
 import cv2
 import numpy as np
 from decouple import config
+
+
+def custom_404_view(request, exception=None):
+    return render(request, "404.html", status=404)
 
 
 @csrf_exempt
