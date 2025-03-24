@@ -59,9 +59,6 @@ cd kchar/backend
 python -m venv venv
 source venv/bin/activate  # On Windows use `venv\Scripts\activate`
 
-# Install dependencies
-pip install -r requirements.txt
-
 # Run Django server
 python manage.py runserver
 ```
